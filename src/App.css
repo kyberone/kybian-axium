@@ -1,0 +1,202 @@
+.axium-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.axium-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.axium-header h1 {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.axium-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.axium-nav a {
+  color: var(--axium-text);
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.axium-nav a:hover {
+  color: var(--axium-orange);
+}
+
+.hub-tag {
+  background: var(--axium-rust);
+  padding: 4px 10px;
+}
+
+.axium-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.axium-hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+.hero-img-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.5) contrast(1.2);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--axium-dark) 20%, transparent 100%);
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.axium-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: var(--axium-rust);
+  color: var(--axium-text);
+  border-bottom: 2px solid var(--axium-rust);
+}
+
+.panel-head h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--axium-text);
+  text-shadow: none;
+}
+
+.quote-list, .trade-items, .chat-window {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quote-card {
+  font-style: italic;
+  border-left: 2px solid var(--axium-orange);
+  padding-left: 15px;
+}
+
+.trade-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  border-bottom: 1px dashed var(--axium-border);
+  padding-bottom: 8px;
+}
+
+.offer {
+  color: var(--axium-amber);
+}
+
+.chat-window {
+  height: 200px;
+  overflow-y: auto;
+  background: rgba(0,0,0,0.4);
+  font-size: 0.85rem;
+}
+
+.user {
+  color: var(--axium-orange);
+  font-weight: bold;
+}
+
+.chat-input {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--axium-border);
+}
+
+.chat-input input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  color: var(--axium-text);
+  font-family: inherit;
+  outline: none;
+}
+
+.alert-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 25px;
+  background: rgba(255, 140, 0, 0.1);
+  color: var(--axium-orange);
+  font-weight: bold;
+  font-size: 0.8rem;
+  animation: flicker 4s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.axium-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
