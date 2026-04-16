@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Radio, Hammer, BookOpen, AlertTriangle, MessageSquare, Send, Zap, ChevronRight } from 'lucide-react';
 import './App.css';
 
