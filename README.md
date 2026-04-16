@@ -17,4 +17,4 @@ The Axium Coalition is a decentralized alliance prioritizing autonomy and mutual
 Maintain radio silence when Directorate frigates are in-sector. Share your oxygen; build your future.
 
 ---
-*Decentralized. Autonomous. Free. // Axium Coalition // 342 AF*
+*Decentralized. Autonomous. Free. // Axium Coalition // 52 AF*

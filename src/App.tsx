@@ -167,7 +167,7 @@ function App() {
 
       <footer className="axium-footer">
         <div className="footer-line" />
-        <p>Decentralized. Autonomous. Free. // Axium Coalition // 342 AF</p>
+        <p>Decentralized. Autonomous. Free. // Axium Coalition // 52 AF</p>
       </footer>
     </div>
   );
