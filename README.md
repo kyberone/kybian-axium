@@ -1,73 +1,20 @@
-# React + TypeScript + Vite
+# AXIUM RELAY :: RIM-NET
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+"Centralization is the rot that broke the stars."
 
-Currently, two official plugins are available:
+This is the independent communication node for the Axium Coalition, serving the scavengers, survivors, and free-thinkers of the Outer Rim.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## [ RIM OVERVIEW ]
+The Axium Coalition is a decentralized alliance prioritizing autonomy and mutual aid. We believe that the greedy centralization of the Core led to The Fracture, and we survive through scavenging and shared knowledge.
 
-## React Compiler
+## [ COALITION SERVICES ]
+- **Salvage Bulletin:** A functional marketplace for trading dreadnought coils, scrap-plating, and Veil-Diver parts.
+- **Coalition Chat:** Real-time communication on frequency 144.2 for scavenger coordination and patrol alerts.
+- **Rim Philosophy:** Access to the core beliefs that keep our community independent.
+- **Veil Warnings:** Active monitoring of radiological spikes and Directorate fleet movements.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## [ SCAVENGER PROTOCOLS ]
+Maintain radio silence when Directorate frigates are in-sector. Share your oxygen; build your future.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+*Decentralized. Autonomous. Free. // Axium Coalition // 342 AF*

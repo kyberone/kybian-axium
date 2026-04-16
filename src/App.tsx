@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Radio, Hammer, BookOpen, Share2, AlertTriangle, MessageSquare, Send, Zap, ChevronRight } from 'lucide-react';
+import { Radio, Hammer, BookOpen, AlertTriangle, MessageSquare, Send, Zap, ChevronRight } from 'lucide-react';
 import './App.css';
 
 const philosophy = [
