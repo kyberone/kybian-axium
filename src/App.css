@@ -285,7 +285,32 @@ h3 { font-size: 0.9rem; margin: 0; letter-spacing: 1px; }
   margin-bottom: 20px;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--axium-bg); }
-::-webkit-scrollbar-thumb { background: var(--axium-rust); }
+/* Responsive */
+@media (max-width: 768px) {
+  .axium-header {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .axium-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text {
+    padding: 20px;
+  }
+
+  .axium-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .alert-bar {
+    padding: 10px;
+  }
+
+  .alert-text {
+    font-size: 0.7rem;
+  }
+}
+
