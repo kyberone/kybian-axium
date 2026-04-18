@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Radio, Hammer, BookOpen, AlertTriangle, MessageSquare, Send, Zap, ChevronRight } from 'lucide-react';
+import { Radio, Hammer, BookOpen, AlertTriangle, MessageSquare, Send, Zap, ChevronRight, Package } from 'lucide-react';
+import ScrapSorter from './components/ScrapSorter';
 import './App.css';
 
 const philosophy = [
@@ -58,13 +59,25 @@ function App() {
         </div>
         <nav className="axium-nav">
           <a href="#philosophy">Philosophy</a>
-          <a href="#trade">Salvage-Trade</a>
-          <a href="#comms">Comms-Freq</a>
-          <a href="https://kybian.com" className="hub-tag">[ BACK_TO_HUB ]</a>
+          <a href="#sorter">Salvage-Shift</a>
+          <a href="#trade">Trade</a>
+          <a href="#comms">Comms</a>
+          <a href="https://kybian.com" className="hub-tag">[ HUB ]</a>
         </nav>
       </header>
 
       <main className="axium-main">
+        {/* Sorter Game Section */}
+        <section id="sorter" className="salvage-game-section scrap-border">
+           <div className="panel-head">
+              <Package size={20} className="axium-orange" />
+              <h3>ACTIVE SALVAGE LINE :: DOCK 7</h3>
+            </div>
+            <div className="game-wrapper">
+              <ScrapSorter />
+            </div>
+        </section>
+
         {/* Hero */}
         <section className="axium-hero scrap-border">
           <div className="hero-img-wrap">

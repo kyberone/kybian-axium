@@ -1,0 +1,162 @@
+.sorter-container {
+  width: 400px;
+  margin: 0 auto;
+  background: #111;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.sorter-header {
+  padding: 10px 15px;
+  background: var(--axium-rust);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.sorter-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sorter-stats {
+  display: flex;
+  gap: 15px;
+}
+
+.stat.health.low {
+  color: #ff3e3e;
+  animation: axium-blink 0.5s infinite;
+}
+
+@keyframes axium-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.sorter-viewport {
+  height: 500px;
+  position: relative;
+  background: 
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.2'/%3E%3C/svg%3E");
+}
+
+.sorter-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 21, 16, 0.95);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.sorter-overlay.fatal {
+  background: rgba(40, 10, 0, 0.95);
+}
+
+.sorter-overlay h3 {
+  font-size: 1.5rem;
+  color: var(--axium-orange);
+  margin-bottom: 15px;
+}
+
+.sorter-overlay p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.scrap-item {
+  position: absolute;
+  cursor: grab;
+  z-index: 10;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+.scrap-item:active { cursor: grabbing; }
+
+.ore-icon { color: var(--axium-orange); filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.3)); }
+.metal-icon { color: #888; }
+.debris-icon { color: #7ed321; filter: drop-shadow(0 0 10px #7ed321); }
+
+.sorter-bins {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.bin {
+  flex: 1;
+  border: 1px dashed var(--axium-rust);
+  background: rgba(78, 42, 20, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  text-align: center;
+  color: var(--axium-rust);
+  font-weight: bold;
+}
+
+.bin.ore { border-color: var(--axium-orange); color: var(--axium-orange); }
+.bin.trash { border-color: #7ed321; color: #7ed321; }
+
+.game-feedback {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 15;
+}
+
+.game-feedback.success { color: #4caf50; }
+.game-feedback.error { color: #f44336; }
+
+.conveyor-belt {
+  height: 40px;
+  background: #222;
+  border-top: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.belt-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 20px,
+    rgba(255, 255, 255, 0.05) 20px,
+    rgba(255, 255, 255, 0.05) 40px
+  );
+  animation: belt-move 2s linear infinite;
+}
+
+@keyframes belt-move {
+  from { transform: translateX(0); }
+  to { transform: translateX(-40px); }
+}

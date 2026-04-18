@@ -90,6 +90,18 @@ h1 { font-size: 1.2rem; margin: 0; letter-spacing: 2px; }
   font-weight: bold;
 }
 
+/* Sorter Section */
+.salvage-game-section {
+  margin-bottom: 20px;
+}
+
+.game-wrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
 /* Hero */
 .axium-hero {
   display: grid;
