@@ -177,12 +177,16 @@ const ScrapSorter: React.FC = () => {
               key={item.id}
               drag
               dragConstraints={{ top: 0, left: 0, right: 300, bottom: 500 }}
-              onDragEnd={(_, info) => {
-                const y = item.y + info.point.y;
-                const x = item.x + info.point.x;
+              onDragEnd={(event, info) => {
+                const viewport = (event.target as HTMLElement).closest('.sorter-viewport');
+                if (!viewport) return;
+                const rect = viewport.getBoundingClientRect();
+                const x = info.point.x - rect.left;
+                const y = info.point.y - rect.top;
+                
                 if (y > 350) {
-                  if (x < 100) handleSort(item.id, 'ore');
-                  else if (x > 200) handleSort(item.id, 'trash');
+                  if (x < 133) handleSort(item.id, 'ore');
+                  else if (x > 266) handleSort(item.id, 'trash');
                   else handleSort(item.id, 'metal');
                 }
               }}
