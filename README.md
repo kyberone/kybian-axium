@@ -12,6 +12,7 @@ The Axium Coalition is a decentralized alliance prioritizing autonomy and mutual
 - **Coalition Chat:** Real-time communication on frequency 144.2 for scavenger coordination and patrol alerts.
 - **Rim Philosophy:** Access to the core beliefs that keep our community independent.
 - **Veil Warnings:** Active monitoring of radiological spikes and Directorate fleet movements.
+- **Scrap Sorter:** Physics-based sorting game. Drag falling salvage into correct bins to earn credits and prevent hull damage. (Accessible via Salvage Line)
 
 ## [ SCAVENGER PROTOCOLS ]
 Maintain radio silence when Directorate frigates are in-sector. Share your oxygen; build your future.
