@@ -34,7 +34,7 @@ const ScrapSorter: React.FC = () => {
       x: 50 + Math.random() * 200,
       y: -50,
       rotation: Math.random() * 360,
-      speed: 1.5 + (scoreRef.current / 1000),
+      speed: 1.0 + (scoreRef.current / 2000),
     };
     itemsRef.current.push(newItem);
     setItems([...itemsRef.current]);
@@ -44,7 +44,7 @@ const ScrapSorter: React.FC = () => {
     if (gameState !== 'PLAYING') return;
 
     frameCountRef.current++;
-    if (frameCountRef.current % 60 === 0) spawnItem();
+    if (frameCountRef.current % 90 === 0) spawnItem();
 
     const currentItems = [...itemsRef.current];
     let healthPenalty = 0;
