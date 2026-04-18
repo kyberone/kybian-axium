@@ -190,10 +190,15 @@ const ScrapSorter: React.FC = () => {
               style={{ top: item.y, left: item.x, rotate: item.rotation }}
             >
               {getItemIcon(item.type)}
-              <span className="item-label">{item.type.toUpperCase()}</span>
             </motion.div>
           ))}
         </AnimatePresence>
+
+        <div className="sorter-legend glass-panel">
+          <div className="legend-item"><Hexagon size={12} className="ore-icon" /> <span>DULL-GLASS</span></div>
+          <div className="legend-item"><Box size={12} className="metal-icon" /> <span>SCRAP-IRON</span></div>
+          <div className="legend-item"><AlertTriangle size={12} className="debris-icon" /> <span>INCINERATOR</span></div>
+        </div>
 
         <div className="sorter-bins">
           <div className="bin ore">DULL-GLASS</div>
