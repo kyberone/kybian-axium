@@ -68,21 +68,6 @@ function App() {
       </header>
 
       <main className="axium-main">
-        {/* Sorter Game Section */}
-        <section id="sorter" className="salvage-game-section scrap-border">
-           <div className="panel-head">
-              <Package size={20} className="axium-orange" />
-              <h3>ACTIVE SALVAGE LINE :: DOCK 7</h3>
-            </div>
-            <div className="game-wrapper access-prompt">
-              <Hammer size={48} className="axium-orange mb-20" />
-              <p>Industrial sorting terminal for Outer Rim salvage. Report for your assigned shift to earn Axium credits.</p>
-              <button onClick={() => setIsGameOpen(true)} className="axium-button">
-                REPORT_FOR_SHIFT
-              </button>
-            </div>
-        </section>
-
         {/* Hero */}
         <section className="axium-hero scrap-border">
           <div className="hero-img-wrap">
@@ -180,6 +165,21 @@ function App() {
               VEIL-STORM DETECTED IN SECTOR 4 :: ALL SCAVENGERS RETURN TO OUTPOST :: RE-ROUTE ALL FTL-SNARES :: DIRECTORATE FRIGATE SPOTTED NEAR AXIUM-7 :: STAY RADIOSILENT
             </marquee>
           </div>
+        </section>
+
+        {/* Sorter Game Section */}
+        <section id="sorter" className="salvage-game-section scrap-border">
+           <div className="panel-head">
+              <Package size={20} className="axium-orange" />
+              <h3>ACTIVE SALVAGE LINE :: DOCK 7</h3>
+            </div>
+            <div className="game-wrapper access-prompt">
+              <Hammer size={48} className="axium-orange mb-20" />
+              <p>Industrial sorting terminal for Outer Rim salvage. Report for your assigned shift to earn Axium credits.</p>
+              <button onClick={() => setIsGameOpen(true)} className="axium-button">
+                REPORT_FOR_SHIFT
+              </button>
+            </div>
         </section>
       </main>
 
