@@ -72,10 +72,37 @@
   margin-bottom: 15px;
 }
 
-.sorter-overlay p {
-  font-size: 0.8rem;
-  line-height: 1.6;
+.shift-manual {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.4);
   margin-bottom: 25px;
+  text-align: left;
+  font-size: 0.75rem;
+  width: 100%;
+}
+
+.shift-manual h4 {
+  color: var(--axium-orange);
+  margin: 0 0 10px 0;
+  text-decoration: underline;
+}
+
+.shift-manual ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.shift-manual li {
+  margin-bottom: 5px;
+  color: var(--axium-text);
+}
+
+.warning {
+  color: #ff3e3e;
+  font-weight: bold;
+  font-size: 0.65rem;
+  margin-top: 10px;
 }
 
 .scrap-item {

@@ -145,13 +145,20 @@ const ScrapSorter: React.FC = () => {
 
       <div className="sorter-viewport">
         <AnimatePresence>
-          {gameState === 'IDLE' && (
             <motion.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="sorter-overlay">
-              <h3>SCRAP_SORTER_v1</h3>
-              <p>Sort arriving salvage into the correct bins. Throw radioactive debris into the incinerator. Don't let the hull breach.</p>
+              <h3 className="axium-orange">SCRAP_SORTER_v1.0</h3>
+              <div className="shift-manual scrap-border">
+                <h4>SHIFT_MANUAL:</h4>
+                <p>DRAG ITEMS INTO CORRECT BINS:</p>
+                <ul>
+                  <li>• [ ORE ]: DULL-GLASS (LEFT)</li>
+                  <li>• [ METAL ]: SCRAP-IRON (MIDDLE)</li>
+                  <li>• [ DEBRIS ]: INCINERATOR (RIGHT)</li>
+                </ul>
+                <p className="warning">WARNING: MIS-SORTING OR DROPPING ITEMS CAUSES HULL DAMAGE.</p>
+              </div>
               <button onClick={startGame} className="axium-button">START_SHIFT</button>
             </motion.div>
-          )}
 
           {gameState === 'GAMEOVER' && (
             <motion.div key="over" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="sorter-overlay fatal">
