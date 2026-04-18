@@ -28,6 +28,7 @@ function App() {
   const [chatInput, setChatInput] = useState('');
   const [trades, setTrades] = useState(initialTrades);
   const [bidStatus, setBidStatus] = useState<number | null>(null);
+  const [isGameOpen, setIsGameOpen] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -59,7 +60,7 @@ function App() {
         </div>
         <nav className="axium-nav">
           <a href="#philosophy">Philosophy</a>
-          <a href="#sorter">Salvage-Shift</a>
+          <button onClick={() => setIsGameOpen(true)} className="nav-game-btn">Salvage-Shift</button>
           <a href="#trade">Trade</a>
           <a href="#comms">Comms</a>
           <a href="https://kybian.com" className="hub-tag">[ HUB ]</a>
@@ -73,8 +74,12 @@ function App() {
               <Package size={20} className="axium-orange" />
               <h3>ACTIVE SALVAGE LINE :: DOCK 7</h3>
             </div>
-            <div className="game-wrapper">
-              <ScrapSorter />
+            <div className="game-wrapper access-prompt">
+              <Hammer size={48} className="axium-orange mb-20" />
+              <p>Industrial sorting terminal for Outer Rim salvage. Report for your assigned shift to earn Axium credits.</p>
+              <button onClick={() => setIsGameOpen(true)} className="axium-button">
+                REPORT_FOR_SHIFT
+              </button>
             </div>
         </section>
 
@@ -182,6 +187,29 @@ function App() {
         <div className="footer-line" />
         <p>Decentralized. Autonomous. Free. // Axium Coalition // 52 AF</p>
       </footer>
+
+      <AnimatePresence>
+        {isGameOpen && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="game-modal-overlay"
+          >
+            <motion.div 
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              className="game-modal-content"
+            >
+              <button className="modal-close axium-orange" onClick={() => setIsGameOpen(false)}>
+                [ END_SHIFT ]
+              </button>
+              <ScrapSorter />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

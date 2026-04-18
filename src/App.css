@@ -95,12 +95,74 @@ h1 { font-size: 1.2rem; margin: 0; letter-spacing: 2px; }
   margin-bottom: 20px;
 }
 
-.game-wrapper {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.4);
+.nav-game-btn {
+  background: transparent;
+  border: none;
+  color: var(--axium-text);
+  font-family: inherit;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding: 0;
 }
+
+.nav-game-btn:hover {
+  color: var(--axium-orange);
+}
+
+.game-wrapper.access-prompt {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.access-prompt p {
+  margin-bottom: 25px;
+  font-size: 0.85rem;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+/* Modal */
+.game-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.game-modal-content {
+  position: relative;
+  width: 95%;
+  max-width: 450px;
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.modal-close:hover {
+  text-shadow: 0 0 10px var(--axium-orange);
+}
+
+.mb-20 { margin-bottom: 20px; }
 
 /* Hero */
 .axium-hero {
