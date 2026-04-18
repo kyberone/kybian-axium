@@ -145,6 +145,7 @@ const ScrapSorter: React.FC = () => {
 
       <div className="sorter-viewport">
         <AnimatePresence>
+          {gameState === 'IDLE' && (
             <motion.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="sorter-overlay">
               <h3 className="axium-orange">SCRAP_SORTER_v1.0</h3>
               <div className="shift-manual scrap-border">
@@ -159,6 +160,7 @@ const ScrapSorter: React.FC = () => {
               </div>
               <button onClick={startGame} className="axium-button">START_SHIFT</button>
             </motion.div>
+          )}
 
           {gameState === 'GAMEOVER' && (
             <motion.div key="over" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="sorter-overlay fatal">
