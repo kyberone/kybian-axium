@@ -151,10 +151,10 @@ const ScrapSorter: React.FC = () => {
               <div className="shift-manual scrap-border">
                 <h4>SHIFT_MANUAL:</h4>
                 <p>DRAG ITEMS INTO CORRECT BINS:</p>
-                <ul>
-                  <li>• [ ORE ]: DULL-GLASS (LEFT)</li>
-                  <li>• [ METAL ]: SCRAP-IRON (MIDDLE)</li>
-                  <li>• [ DEBRIS ]: INCINERATOR (RIGHT)</li>
+                <ul className="instruction-list">
+                  <li><Hexagon size={16} className="ore-icon" /> [ ORE ]: DULL-GLASS (LEFT)</li>
+                  <li><Box size={16} className="metal-icon" /> [ METAL ]: SCRAP-IRON (MIDDLE)</li>
+                  <li><AlertTriangle size={16} className="debris-icon" /> [ DEBRIS ]: INCINERATOR (RIGHT)</li>
                 </ul>
                 <p className="warning">WARNING: MIS-SORTING OR DROPPING ITEMS CAUSES HULL DAMAGE.</p>
               </div>
@@ -190,6 +190,7 @@ const ScrapSorter: React.FC = () => {
               style={{ top: item.y, left: item.x, rotate: item.rotation }}
             >
               {getItemIcon(item.type)}
+              <span className="item-label">{item.type.toUpperCase()}</span>
             </motion.div>
           ))}
         </AnimatePresence>
